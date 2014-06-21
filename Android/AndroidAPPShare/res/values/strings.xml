@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidAPPShare</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- CDATA是去转义 -->
+    <string name="htmlFormattedText">
+      <![CDATA[
+      Text with markup for [b]bold[/b]
+      and [i]italic[/i] text.
+ 
+      There is also support for a 
+      <tt>teletype-style</tt> font. 
+      But no use for the <code>code</code>
+      tag!
+ 
+      ]]></string>
+
+</resources>

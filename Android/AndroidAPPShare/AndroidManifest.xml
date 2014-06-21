@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.pu.android.appshare"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.pu.appshare.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- auther是你的包名加上assetprovider -->
+        <provider
+            android:name="org.pu.appshare.AssetProvider"
+            android:authorities="org.pu.android.appshare.assetprovider"
+            android:exported="true"
+            android:grantUriPermissions="true" />
+
+        <!-- file privider 其实就是分享文件的URL -->
+        <!-- auther是你的包名加上fileprovider -->
+        <provider 
+            android:name="org.pu.appshare.FileProvider"
+            android:authorities="org.pu.android.appshare.fileprovider" 
+            android:exported="true"
+            android:grantUriPermissions="true"></provider>
+        
+        
+    </application>
+
+</manifest>
